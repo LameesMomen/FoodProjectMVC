@@ -1,0 +1,147 @@
+﻿@model MainDisheshViewModel
+@{
+    Layout = "_NavLayout1";
+}
+<style>
+    img {
+    transition: transform .2s; /* Animation */
+}
+
+img:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+</style>
+<div class="container" >
+    <div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2  text-center my-5 shadow-lg p-3 mb-5 bg-white"style=" border-radius:70px ">
+            <div class=" mb-5 shadow-lg" style="border-bottom:1px solid red; border-radius:40px">
+                <p class="h4 p-lg-3">RECIPES</p>
+            </div>
+            <div>
+                <a style="text-decoration:none" asp-action="Index" asp-controller="Pizza">
+
+                    <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Pizza/Cheese pizza.png"/>
+                </a>
+            </div>
+            <div>
+                <p class="fs-3">Pizza</p>
+            </div>
+            <div>
+                <a style="text-decoration:none" asp-action="Index" asp-controller="Pasta">
+
+                    <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Pasta/Chicken spaghetti.jpg"/>
+                </a>
+            </div>
+            <div>
+                <p class="fs-3">Pasta</p>
+            </div>
+            <div>
+                <a style="text-decoration:none" asp-action="Index" asp-controller="Salad">
+
+                    <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Salad/caesar salad with asparagus.jpg"/>
+                </a>
+            </div>
+            <div>
+                <p class="fs-3">Salad</p>
+            </div>
+            <div>
+                <a style="text-decoration:none" asp-action="Index" asp-controller="Soup">
+
+                    <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Soup/Detox soup.png"/>
+                </a>
+            </div>
+            <div>
+                <p class="fs-3">Soup</p>
+            </div>
+                    <div>
+                <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Fish/Fish.jpg"/>
+            </div>
+            <div>
+                <p class="fs-3">Fish</p>
+            </div>
+                    <div>
+                <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Dessert/Dessert.jpg"/>
+            </div>
+            <div>
+                <p class="fs-4">Dessert</p>
+            </div>
+                <div>
+                <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Sandwitch/Sandwich.png"/>
+            </div>
+            <div>
+                <p class="fs-5">Sandwich</p>
+            </div>
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-9 offset-1 text-center my-5  p-3 my-5 mb-5 bg-white">
+        <p class="ourDishes fs-1 text-danger mb-5">Our Dishes</p>
+        <div class="shadow-lg" style=" border-radius:40px ">
+        <p class="h3 text center p-3 mb-4 shadow-lg"style="border-bottom:1px solid red;border-radius:40px">PIZZA</p>
+          <div class=" d-flex flex-row flex-wrap">
+        @foreach (var item in Model.Pizzas)
+       {
+           <div class="col-lg-2 col-md-2 col-sm-2 mx-auto ">
+             <div >
+                 <a asp-action="Details" asp-controller="Pizza" asp-route-id="@item.Id" style="text-decoration:none">
+                <img src="/Image/Pizza/@item.Image" class="rounded-circle w-50 h-75 my-3" alt="...">
+                 </a>
+             </div>
+            <div>
+                <p>@item.Name</p>
+            </div>
+            </div>
+       }
+        </div>
+        <p class="h3 text center p-3 my-4 shadow-lg "style="border-bottom:1px solid red; border-radius:40px">PASTA</p>
+          <div class=" d-flex flex-row flex-wrap">
+        @foreach (var item in Model.Pastas)
+       {
+           <div class="col-lg-2 col-md-2 col-sm-2 mx-auto">
+             <div >
+                 <a asp-action="Details" asp-controller="Pasta" asp-route-id="@item.Id" style="text-decoration:none">
+                <img src="/Image/Pasta/@item.Image" class="rounded-circle w-50 h-75 my-3" alt="...">
+                 </a>
+             </div>
+            <div>
+                <p>@item.Name</p>
+            </div>
+            </div>
+       }
+        </div>
+
+        <p class="h3 text center p-3 my-4 shadow-lg "style="border-bottom:1px solid red; border-radius:40px">SALAD</p>
+          <div class=" d-flex flex-row flex-wrap">
+        @foreach (var item in Model.Salads)
+       {
+           <div class="col-lg-2 col-md-2 col-sm-2 mx-auto">
+             <div >
+                 <a asp-action="Details" asp-controller="Salad" asp-route-id="@item.Id" style="text-decoration:none">
+                <img src="/Image/Salad/@item.Image" class="rounded-circle w-50 h-75 my-3" alt="...">
+                 </a>
+             </div>
+            <div>
+                <p>@item.Name</p>
+            </div>
+            </div>
+       }
+        </div>
+
+        <p class="h3 text center p-3 my-4 shadow-lg "style="border-bottom:1px solid red; border-radius:40px">SOUP</p>
+          <div class=" d-flex flex-row flex-wrap">
+        @foreach (var item in Model.Soups)
+       {
+           <div class="col-lg-2 col-md-2 col-sm-2 mx-auto">
+             <div >
+                 <a asp-action="Details" asp-controller="Soup" asp-route-id="@item.Id" style="text-decoration:none">
+                <img src="/Image/Soup/@item.Image" class="rounded-circle w-50 h-75 my-3" alt="...">
+                 </a>
+             </div>
+            <div>
+                <p>@item.Name</p>
+            </div>
+            </div>
+       }
+        </div>
+    </div>
+    </div>
+</div>
+</div>>

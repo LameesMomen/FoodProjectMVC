@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+hr.divider {
+    height: 0.2rem;
+    max-width: 10.25rem;
+    margin: 1.5rem auto 5.5rem;
+    background-color: #e73743;
+    opacity: 1;
+}
+
+hr.divider-light {
+    background-color: #fff;
+}
+
+#mainNav {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+#mainNav .navbar-brand {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #212529;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    color: #6c757d;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.75rem 0;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link:active {
+    color: #f4623a;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active {
+    color: #f4623a !important;
+}
+
+nav {
+    background-color: transparent;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        box-shadow: none;
+        background-color: transparent;
+    }
+    #mainNav .navbar-brand {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    #mainNav .navbar-brand:hover {
+        color: #fff;
+    }
+    #mainNav .navbar-nav .nav-item .nav-link {
+        color: rgba(255, 255, 255, 0.7);
+        padding: 0 1rem;
+    }
+    #mainNav .navbar-nav .nav-item .nav-link:hover {
+        color: #fff;
+    }
+    #mainNav .navbar-nav .nav-item:last-child .nav-link {
+        padding-right: 0;
+    }
+    #mainNav.navbar-shrink {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        background-color: #fff;
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+        color: #212529;
+    }
+    #mainNav.navbar-shrink .navbar-brand:hover {
+        color: #f4623a;
+    }
+    #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+        color: #212529;
+    }
+    #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+        color: #f4623a;
+    }
+}
+
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background: linear-gradient(to bottom, rgb(92 77 66 / 0%) 0%, rgb(174 153 115 / 45%) 100%), url(../Image/food-wallpaper-20080219213432048x1152.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.nav-link,
+.bi-house,
+.brandName,
+.line-1{
+    font-family: 'Redressed', cursive;
+}
+
+    header.masthead h1,
+    header.masthead .h1 {
+        font-size: 2.25rem;
+    }
+
+@media (min-width: 992px) {
+    header.masthead {
+        height: 100vh;
+        min-height: 40rem;
+        padding-top: 4.5rem;
+        padding-bottom: 0;
+    }
+    header.masthead p {
+        font-size: 1.15rem;
+    }
+    header.masthead h1,
+    header.masthead .h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    header.masthead h1,
+    header.masthead .h1 {
+        font-size: 3.5rem;
+    }
+}
+
+#search {
+    width: 20rem;
+}
+
+@media (min-width: 992px) {
+
+    .line-1 {
+        position: relative;
+        top: 50%;
+        width: 23em;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255, 255, 255, .75);
+        font-size: 230%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateY(-50%);
+    }
+
+
+    /* Animation */
+
+
+    .anim-typewriter {
+        animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 23em;
+        }
+    }
+
+    @keyframes blinkTextCursor {
+        from {
+            border-right-color: rgba(255, 255, 255, .75);
+        }
+
+        to {
+            border-right-color: transparent;
+        }
+    }
+}
+
+    .nav-link:hover,
+    .bi-house:hover,
+    .brandName:hover{
+        color: darkred!important;
+    }
+
+    img {
+        transition: transform .2s; /* Animation */
+    }
+
+    img:hover {
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+.ourDishes {
+    font-family: 'Sacramento', cursive;
+}

@@ -1,0 +1,83 @@
+﻿@model List<Pasta>
+@{
+    Layout = "_NavLayout1";
+}
+<div class="container">
+    <div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2  text-center my-5 shadow-lg p-3 mb-5 bg-white"style=" border-radius:70px ">
+            <div class=" mb-5 shadow-lg" style="border-bottom:1px solid red; border-radius:40px">
+                <p class="h4 p-lg-3">RECIPES</p>
+            </div>
+            <div>
+                <a style="text-decoration:none" asp-action="Index" asp-controller="Pizza">
+
+                    <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Pizza/Cheese pizza.png"/>
+                </a>
+            </div>
+            <div>
+                <p class="fs-3">Pizza</p>
+            </div>
+            <div>
+                <a style="text-decoration:none" asp-action="Index" asp-controller="Pasta">
+
+                    <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Pasta/Chicken spaghetti.jpg"/>
+                </a>
+            </div>
+            <div>
+                <p class="fs-3">Pasta</p>
+            </div>
+            <div>
+                <a style="text-decoration:none" asp-action="Index" asp-controller="Salad">
+
+                    <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Salad/caesar salad with asparagus.jpg"/>
+                </a>
+            </div>
+            <div>
+                <p class="fs-3">Salad</p>
+            </div>
+            <div>
+                <a style="text-decoration:none" asp-action="Index" asp-controller="Soup">
+
+                    <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Soup/Detox soup.png"/>
+                </a>
+            </div>
+            <div>
+                <p class="fs-3">Soup</p>
+            </div>
+                    <div>
+                <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Fish/Fish.jpg"/>
+            </div>
+            <div>
+                <p class="fs-3">Fish</p>
+            </div>
+                    <div>
+                <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Dessert/Dessert.jpg"/>
+            </div>
+            <div>
+                <p class="fs-4">Dessert</p>
+            </div>
+                <div>
+                <img class="rounded-circle w-100 h-50 mb-3 mt-5" src="/Image/Sandwitch/Sandwich.png"/>
+            </div>
+            <div>
+                <p class="fs-5">Sandwich</p>
+            </div>
+    </div>
+<div class="col-lg-9 col-md-9 col-sm-9 offset-1 text-center my-5  p-3 my-5 mb-5 bg-white shadow-lg" style=" border-radius:40px ">
+    <p class=" fs-1 text-danger mb-5">PASTA</p>
+        <div class="d-flex flex-row flex-wrap ms-auto ">
+            @foreach (var item in Model)
+            {
+               <div class="card text-center mb-3 mx-auto">
+                   <a asp-action="Details" asp-controller="Pasta" asp-route-id="@item.Id">
+                        <img src="/Image/Pasta/@item.Image" class="card-img-top  ms-2" alt="..." style="width:15rem; height:10rem">
+                    </a>
+                    <div class="card-body">
+                    <p class="card-text h-25">@item.Name</p>
+                    </div>
+            </div>
+            }
+        </div>
+</div>
+    </div>
+    </div>
